@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/justin/cidr/cmd"
+	"github.com/trahma/cidr/cmd"
 )
 
 func main() {

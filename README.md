@@ -19,13 +19,13 @@ A beautiful command-line tool for parsing CIDR subnet masks and checking IP addr
 ## Installation
 
 ```bash
-go install github.com/justin/cidr@latest
+go install github.com/trahma/cidr@latest
 ```
 
 Or build from source:
 
 ```bash
-git clone https://github.com/justin/cidr
+git clone https://github.com/trahma/cidr
 cd cidr
 go build -o cidr .
 ```

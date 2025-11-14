@@ -1,4 +1,4 @@
-module github.com/justin/cidr
+module github.com/trahma/cidr
 
 go 1.25.3
 
