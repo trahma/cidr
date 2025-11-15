@@ -30,6 +30,45 @@ cd cidr
 go build -o cidr .
 ```
 
+## Post-Installation Setup
+
+After installing with `go install`, you need to ensure `GOPATH/bin` is in your PATH.
+
+### Check if already configured
+
+```bash
+echo $PATH | grep -q "$(go env GOPATH)/bin" && echo "✓ Already in PATH" || echo "✗ Not in PATH"
+```
+
+### Add to PATH
+
+If not already in PATH, add it to your shell configuration:
+
+**Bash** (`~/.bashrc`):
+```bash
+echo 'export PATH="$PATH:$(go env GOPATH)/bin"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+**Zsh** (`~/.zshrc`):
+```bash
+echo 'export PATH="$PATH:$(go env GOPATH)/bin"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+**Fish** (`~/.config/fish/config.fish`):
+```bash
+fish_add_path (go env GOPATH)/bin
+```
+
+### Verify Installation
+
+```bash
+cidr --help
+```
+
+If you see the help output, you're all set!
+
 ## Usage
 
 ### Parse a CIDR range
